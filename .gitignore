@@ -1,3 +1,15 @@
+Debug
+Release
+*.opensdf
+*.sdf
+*.suo
+*.filters
+*.user
+*.dll
+*.exe
+*.mexw64
+*.aps
+
 # editor
 *.vs/
 *bin/
