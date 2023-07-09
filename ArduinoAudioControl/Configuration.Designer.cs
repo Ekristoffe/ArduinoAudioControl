@@ -1,4 +1,4 @@
-namespace TaskTrayApplication
+namespace ArduinoAudioControl
 {
     partial class Configuration
     {

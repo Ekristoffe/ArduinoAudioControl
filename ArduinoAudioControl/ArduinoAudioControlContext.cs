@@ -3,19 +3,19 @@ using System.Collections.Generic;
 using System.Text;
 using System.Windows.Forms;
 
-namespace TaskTrayApplication
+namespace ArduinoAudioControl
 {
-    public class TaskTrayApplicationContext : ApplicationContext
+    public class ArduinoAudioControlContext : ApplicationContext
     {
         NotifyIcon notifyIcon = new NotifyIcon();
         Configuration configWindow = new Configuration();
 
-        public TaskTrayApplicationContext()
+        public ArduinoAudioControlContext()
         {
             MenuItem configMenuItem = new MenuItem("Configuration", new EventHandler(ShowConfig));
             MenuItem exitMenuItem = new MenuItem("Exit", new EventHandler(Exit));
 
-            notifyIcon.Icon = TaskTrayApplication.Properties.Resources.AppIcon;
+            notifyIcon.Icon = ArduinoAudioControl.Properties.Resources.AppIcon;
             notifyIcon.DoubleClick += new EventHandler(ShowMessage);
             notifyIcon.ContextMenu = new ContextMenu(new MenuItem[] { configMenuItem, exitMenuItem });
             notifyIcon.Visible = true;
@@ -24,7 +24,7 @@ namespace TaskTrayApplication
         void ShowMessage(object sender, EventArgs e)
         {
             // Only show the message if the settings say we can.
-            if (TaskTrayApplication.Properties.Settings.Default.ShowMessage)
+            if (ArduinoAudioControl.Properties.Settings.Default.ShowMessage)
                 MessageBox.Show("Hello World");
         }
 
