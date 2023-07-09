@@ -1,7 +1,7 @@
 # editor
-.vs/
-bin/
-obj/
+*.vs/
+*bin/
+*obj/
 
 # Packages #
 ############
