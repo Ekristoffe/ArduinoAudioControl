@@ -19,6 +19,10 @@ namespace ArduinoAudioControl
             notifyIcon.DoubleClick += new EventHandler(ShowMessage);
             notifyIcon.ContextMenu = new ContextMenu(new MenuItem[] { configMenuItem, exitMenuItem });
             notifyIcon.Visible = true;
+
+            SerialManager.Serial();
+
+            AudioDevice.AudioDevices();
         }
 
         void ShowMessage(object sender, EventArgs e)

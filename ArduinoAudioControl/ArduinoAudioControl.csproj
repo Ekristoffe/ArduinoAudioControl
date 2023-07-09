@@ -60,6 +60,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AudioDevice.cs" />
+    <Compile Include="AudioManager.cs" />
     <Compile Include="Configuration.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -68,6 +70,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SerialManager.cs" />
     <EmbeddedResource Include="Configuration.resx">
       <SubType>Designer</SubType>
       <DependentUpon>Configuration.cs</DependentUpon>
@@ -108,6 +111,12 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CoreAudioApi\CoreAudioApi.csproj">
+      <Project>{9f1076aa-63df-4128-9c10-fd65e425c783}</Project>
+      <Name>CoreAudioApi</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
